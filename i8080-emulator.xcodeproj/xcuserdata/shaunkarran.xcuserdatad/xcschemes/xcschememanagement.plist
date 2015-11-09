@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>i8080-disassembler.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>i8080-emulator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>91E486AD1BF07AF800846652</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91E486C21BF07CD000846652</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		91E486B21BF07AF800846652 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 91E486B11BF07AF800846652 /* main.c */; };
+		91E486C61BF07CD000846652 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 91E486C51BF07CD000846652 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		91E486AC1BF07AF800846652 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		91E486C11BF07CD000846652 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +35,20 @@
 /* Begin PBXFileReference section */
 		91E486AE1BF07AF800846652 /* i8080-emulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "i8080-emulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E486B11BF07AF800846652 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		91E486C31BF07CD000846652 /* i8080-disassembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "i8080-disassembler"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E486C51BF07CD000846652 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		91E486CA1BF07DF200846652 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		91E486AB1BF07AF800846652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E486C01BF07CD000846652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				91E486B01BF07AF800846652 /* i8080-emulator */,
+				91E486C41BF07CD000846652 /* i8080-disassembler */,
 				91E486AF1BF07AF800846652 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				91E486AE1BF07AF800846652 /* i8080-emulator */,
+				91E486C31BF07CD000846652 /* i8080-disassembler */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +82,15 @@
 				91E486B11BF07AF800846652 /* main.c */,
 			);
 			path = "i8080-emulator";
+			sourceTree = "<group>";
+		};
+		91E486C41BF07CD000846652 /* i8080-disassembler */ = {
+			isa = PBXGroup;
+			children = (
+				91E486CA1BF07DF200846652 /* resources */,
+				91E486C51BF07CD000846652 /* main.c */,
+			);
+			path = "i8080-disassembler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +113,23 @@
 			productReference = 91E486AE1BF07AF800846652 /* i8080-emulator */;
 			productType = "com.apple.product-type.tool";
 		};
+		91E486C21BF07CD000846652 /* i8080-disassembler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91E486C71BF07CD000846652 /* Build configuration list for PBXNativeTarget "i8080-disassembler" */;
+			buildPhases = (
+				91E486BF1BF07CD000846652 /* Sources */,
+				91E486C01BF07CD000846652 /* Frameworks */,
+				91E486C11BF07CD000846652 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "i8080-disassembler";
+			productName = "i8080-disassembler";
+			productReference = 91E486C31BF07CD000846652 /* i8080-disassembler */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +140,9 @@
 				ORGANIZATIONNAME = "Shaun Karran";
 				TargetAttributes = {
 					91E486AD1BF07AF800846652 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					91E486C21BF07CD000846652 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -109,6 +160,7 @@
 			projectRoot = "";
 			targets = (
 				91E486AD1BF07AF800846652 /* i8080-emulator */,
+				91E486C21BF07CD000846652 /* i8080-disassembler */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E486B21BF07AF800846652 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E486BF1BF07CD000846652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E486C61BF07CD000846652 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +278,20 @@
 			};
 			name = Release;
 		};
+		91E486C81BF07CD000846652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		91E486C91BF07CD000846652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -235,6 +309,14 @@
 			buildConfigurations = (
 				91E486B61BF07AF800846652 /* Debug */,
 				91E486B71BF07AF800846652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91E486C71BF07CD000846652 /* Build configuration list for PBXNativeTarget "i8080-disassembler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91E486C81BF07CD000846652 /* Debug */,
+				91E486C91BF07CD000846652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
