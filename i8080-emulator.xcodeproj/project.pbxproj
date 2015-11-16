@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91ADC6E81BF9F57900CDB326 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 91ADC6E61BF9F57900CDB326 /* cpu.c */; };
+		91D9E1C21BF1AF9900E1DC31 /* instruction_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 91D9E1C01BF1AF9900E1DC31 /* instruction_decoder.c */; };
 		91E486B21BF07AF800846652 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 91E486B11BF07AF800846652 /* main.c */; };
 		91E486C61BF07CD000846652 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 91E486C51BF07CD000846652 /* main.c */; };
 /* End PBXBuildFile section */
@@ -33,6 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		91ADC6E61BF9F57900CDB326 /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpu.c; sourceTree = "<group>"; };
+		91ADC6E71BF9F57900CDB326 /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
+		91D9E1C01BF1AF9900E1DC31 /* instruction_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = instruction_decoder.c; sourceTree = "<group>"; };
+		91D9E1C11BF1AF9900E1DC31 /* instruction_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instruction_decoder.h; sourceTree = "<group>"; };
 		91E486AE1BF07AF800846652 /* i8080-emulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "i8080-emulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E486B11BF07AF800846652 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		91E486C31BF07CD000846652 /* i8080-disassembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "i8080-disassembler"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				91E486B11BF07AF800846652 /* main.c */,
+				91D9E1C01BF1AF9900E1DC31 /* instruction_decoder.c */,
+				91D9E1C11BF1AF9900E1DC31 /* instruction_decoder.h */,
+				91ADC6E61BF9F57900CDB326 /* cpu.c */,
+				91ADC6E71BF9F57900CDB326 /* cpu.h */,
 			);
 			path = "i8080-emulator";
 			sourceTree = "<group>";
@@ -170,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91ADC6E81BF9F57900CDB326 /* cpu.c in Sources */,
 				91E486B21BF07AF800846652 /* main.c in Sources */,
+				91D9E1C21BF1AF9900E1DC31 /* instruction_decoder.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +323,7 @@
 				91E486B71BF07AF800846652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91E486C71BF07CD000846652 /* Build configuration list for PBXNativeTarget "i8080-disassembler" */ = {
 			isa = XCConfigurationList;
@@ -319,6 +332,7 @@
 				91E486C91BF07CD000846652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
