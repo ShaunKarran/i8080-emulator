@@ -7,9 +7,44 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+void decode_instruction(unsigned short *pc);
+
+int main(int argc, const char * argv[])
+{
+    /* Internal registers. */
+    unsigned char A;
+    unsigned char B;
+    unsigned char C;
+    unsigned char D;
+    unsigned char E;
+    unsigned char H;
+    unsigned char L;
+    unsigned char W;
+    unsigned char Z;
+    
+    unsigned short sp; /* Stack pointer. */
+    unsigned short pc; /* Program counter. */
+    unsigned char  ir; /* Instruction register. */
+    
+    /* Main processor execution loop. Should only exit on NOP instruction. */
+    for (;;) {
+        decode_instruction(&pc);
+    }
+    
+    return EXIT_SUCCESS;
+}
+
+void decode_instruction(unsigned short *pc)
+{
+    switch (*pc)
+    {
+        case constant:
+            <#statements#>
+            break;
+            
+        default:
+            break;
+    }
 }
