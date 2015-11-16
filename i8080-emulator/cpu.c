@@ -9,7 +9,10 @@
 #include "cpu.h"
 
 /* No operations are performed. */
-void NOP() { ; }
+void NOP()
+{
+    cpu.pc++;
+}
 
 /* Processor is stopped. */
 void HLT()
@@ -21,12 +24,14 @@ void HLT()
 void STC()
 {
     cpu.flags &= CARRY_FLAG;
+    cpu.pc++;
 }
 
 /* Carry flag is flipped. */
 void CMC()
 {
     cpu.flags ^= CARRY_FLAG;
+    cpu.pc++;
 }
 
 /* Contents of register r is incremented by 1. */
@@ -34,6 +39,7 @@ void INR(char r)
 {
     r += 1;
     // TODO: What happens to flags?
+    cpu.pc++;
 }
 
 /* Contents of register r is decremented by 1. */
@@ -41,12 +47,14 @@ void DCR(char r)
 {
     r -= 1;
     // TODO: What happens to flags?
+    cpu.pc++;
 }
 
 /* Contents of the accumulator is complemented. */
 void CMA()
 {
     cpu.a = ~cpu.a;
+    cpu.pc++;
 }
 
 /* The eight-bit number in the accumulator is adjusted to form two four-bit
@@ -67,12 +75,14 @@ void DAA()
     {
         cpu.a += (0x06 << 4);
     }
+    cpu.pc++;
 }
 
 /* Contents of r2 is moved into r1. */
 void MOV(char r1, char r2)
 {
     r1 = r2;
+    cpu.pc++;
 }
 
 /*  */

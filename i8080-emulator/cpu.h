@@ -16,12 +16,18 @@
 #define AUX_CARRY_FLAG (1 << 4)
 
 struct i8080 {
-    char b, c;
-    char d, e;
-    char h, l;
-    char a;
-    char flags;
-    char w, z;
+    unsigned char b, c;
+    unsigned char d, e;
+    unsigned char h, l;
+    unsigned char a;
+    unsigned char flags;
+    unsigned char w, z;
+    
+    unsigned short sp; /* Stack pointer. */
+    unsigned short pc; /* Program counter. */
+    unsigned char  ir; /* Instruction register. */
+    
+    unsigned char *ram; // Not sure if RAM should be separate file?
 };
 
 struct i8080 cpu;
